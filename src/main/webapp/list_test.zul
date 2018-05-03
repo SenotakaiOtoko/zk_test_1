@@ -1,0 +1,8 @@
+<cell>
+	<listbox model="@load(vm.countryList)" mold="select"
+		width="200px">
+		<template name="model">
+			<listitem label="@load(each)" />
+		</template>
+	</listbox>
+</cell>
