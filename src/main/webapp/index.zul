@@ -2,9 +2,12 @@
 	<window apply="org.zkoss.bind.BindComposer"
 		viewModel="@id('vm')@init('ru.hostco.ovis.zk_test_1.MyViewModel')"
 		validationMessages="@id('vmsgs')">
-		<hlayout>count: <label value="@load(vm.count)" /></hlayout>
-		<button label="add" onClick="@command('cmd')"/>
-		
+		<hlayout>
+			count:
+			<label value="@load(vm.count)" />
+		</hlayout>
+		<button label="add" onClick="@command('cmd')" />
+
 		<include src="todo_test.zul"></include>
 	</window>
 </zk>

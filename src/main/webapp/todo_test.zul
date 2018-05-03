@@ -28,7 +28,60 @@
 			<textbox value="@bind(vm.subject)"
 				onOK="@command('addTodo')" hflex="1"
 				placeholder="What needs to be done?" />
-			<button onClick="@command('addTodo')" label="add" width="80px" />
+			<button onClick="@command('addTodo')" label="add"
+				width="80px" />
 		</hbox>
 	</vlayout>
+
+	<vlayout
+		form="@id('fx') @load(vm.selectedTodo) @save(vm.selectedTodo, before='updateTodo')">
+		<!-- <hbox align="center" hflex="1">
+			<checkbox checked="@bind(fx.complete)" />
+			<textbox value="@bind(fx.subject)" hflex="1" />
+		</hbox>
+		<grid hflex="1">
+			<columns>
+				<column align="right" hflex="min" />
+				<column />
+			</columns>
+			<rows>
+				<row>
+					<cell>Priority :</cell>
+					<cell>
+						radiogroup model="@bind(vm.priorityList)"
+							selectedItem="@bind(fx.priority)">
+							<template name="model">
+								<radio label="@bind(each.label)" />
+							</template>
+						</radiogroup
+					</cell>
+				</row>
+				<row>
+					<cell>Date :</cell>
+					<cell>
+						<datebox value="@bind(fx.date)" width="200px" />
+					</cell>
+				</row>
+				<row>
+					<cell>Description :</cell>
+					<cell>
+						<textbox value="@bind(fx.description)"
+							multiline="true" hflex="1" height="200px">
+						</textbox>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		<hlayout>
+			<button onClick="@command('updateTodo')" label="Update"/>
+			<button onClick="@command('reloadTodo')" label="Reload"/>
+		</hlayout>
+		-->
+	</vlayout>
+
+	<!--east visible="@bind(not empty vm.selectedTodo)" width="300px"
+		border="none" collapsible="false" splittable="true" minsize="300"
+		autoscroll="true">
+		
+	</east-->
 </zk>
